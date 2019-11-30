@@ -1,3 +1,4 @@
+const LessFunc = require('less-plugin-functions');
 const apiPrefix = ['/app_v3', '/w'];
 const proxy = {};
 apiPrefix.forEach(item => {
@@ -9,5 +10,12 @@ apiPrefix.forEach(item => {
 module.exports = {
   devServer: {
      proxy
+  },
+  css: {
+    loaderOptions: {
+      less: {
+        plugins: [new LessFunc()]
+      }
+    }
   }
 }

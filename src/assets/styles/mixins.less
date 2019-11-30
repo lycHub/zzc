@@ -17,3 +17,11 @@
   }
   .loop(@n, (@i + 1));
 }
+
+@baseFontSize: 37.5;
+.function {
+  .px2rem(@px) {
+    return: @px / @baseFontSize * 1rem;
+  }
+}
+
