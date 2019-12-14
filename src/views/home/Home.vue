@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-<!--    <i class="iconfont icon-tipssuccess"></i>-->
     <header class="top-bar new_header bgef header">
       <div class="logo"><img src="../../assets/images/logo.png" alt="租租车"></div>
     </header>
@@ -13,17 +12,41 @@
       <h1>国际租车</h1>
       <div class="form-box">
         <div class="addrs">
-          <div class="addr addr-get">
+          <div class="addr addr-city">
             <span>取车城市</span>
             <p class="content">
               <b>洛杉矶</b>
             </p>
           </div>
-          <div class="addr addr-get">
-            <span>还车城市</span>
+          <div class="addr addr-point">
+            <span>取车地点</span>
             <p class="content">
-              <b>洛杉矶</b>
+              <b>若基亚剧院</b>
             </p>
+          </div>
+        </div>
+
+        <div class="dts">
+          <div class="dt dt-get">
+            <div class="title">
+              <span>当地取车时间</span>
+              <span class="week">周四</span>
+            </div>
+            <div class="content">
+              <p class="date"><b>12月22日</b></p>
+              <p class="time">10:00</p>
+            </div>
+          </div>
+          <div class="distance">100天</div>
+          <div class="dt dt-back">
+            <div class="title">
+              <span>当地取车时间</span>
+              <span class="week">周四</span>
+            </div>
+            <div class="content">
+              <p class="date"><b>12月22日</b></p>
+              <p class="time">10:00</p>
+            </div>
           </div>
         </div>
       </div>
@@ -42,8 +65,6 @@ export default {
 <style lang="less" scoped>
   @import "../../assets/styles/variable.less";
   @import "../../assets/styles/mixins.less";
-  
-  
   .home {
     .top-bar{
       position: fixed;
@@ -72,17 +93,50 @@ export default {
         color: @font-color-primary;
       }
       .form-box {
+        padding: px2rem(15);
         .addrs {
           display: flex;
+          margin-bottom: px2rem(20);
           .addr {
+            border-bottom: 1px solid @border-prev;
             span {
               font-size: @font-size-normal;
             }
             .content {
-              font-size: @font-size-lgx;
+              font-size: @font-size-lg;
               color: @font-color-black;
-              padding: .15rem 0;
+              padding: px2rem(15) 0;
             }
+          }
+          .addr-city {
+            width: px2rem(90);
+          }
+          .addr-point {
+            flex: 1;
+            margin-left: px2rem(15);
+          }
+        }
+
+        .dts {
+          display: flex;
+          align-items: center;
+          .dt {
+            flex: 1;
+            border-bottom: 1px solid @border-prev;
+            .title {
+              display: flex;
+              justify-content: space-between;
+              font-size: @font-size-normal;
+            }
+            .content {
+              display: flex;
+              align-content: center;
+              font-size: @font-size-lg;
+              padding: px2rem(15) 0;
+            }
+          }
+          .distance {
+            margin: 0 px2rem(15);
           }
         }
       }

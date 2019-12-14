@@ -9,7 +9,8 @@ apiPrefix.forEach(item => {
 });
 module.exports = {
   devServer: {
-     proxy
+    port: 4200,
+    proxy
   },
   css: {
     loaderOptions: {
